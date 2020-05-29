@@ -66,7 +66,7 @@ export const fetchStatewiseData=()=>{
 export const fetchNews=()=>{
     return dispatch=>{
         dispatch(fetchReq())
-        return axios.get(`http://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=e884df9a370b4a5d84adb6684654fa2c`)
+        return axios.get(`https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=e884df9a370b4a5d84adb6684654fa2c`)
                 .then(res=>dispatch(fetchNewsSuccess(res.data)))
                 // .then(res=>console.log(res))
                 .catch(err=>console.log('err',err))
