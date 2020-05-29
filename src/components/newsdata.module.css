@@ -1,0 +1,27 @@
+/* font-family: 'Josefin Sans', sans-serif; */
+
+.title{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+}
+.author{
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    font-size: 18px;
+    font-weight: 400px;
+}
+.des{
+    font-family: 'Vollkorn', serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+.footer{
+    font-family: 'Vollkorn', serif;
+    font-size: 15px;
+}
+
+@media(max-width:567px){
+    .title{
+        font-size: 22px;
+    }
+}
