@@ -67,15 +67,15 @@ export const fetchStatewiseData=()=>{
 export const fetchNews=()=>{
     return dispatch=>{
         dispatch(fetchReq())
-        return axios.get(`https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=${process.env.REACT_APP_GOOGLE_API_KEY}`,
+        return axios.get(`https://yacdn.org/proxy/https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=${process.env.REACT_APP_GOOGLE_API_KEY}`)
         // return axios.get(`https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=e884df9a370b4a5d84adb6684654fa2c`,
-                {
-                    headers:{
-                    "Access-Control-Allow-Origin": '*',
-                    "Access-Control-Allow-Methods": 'GET',
-                    "Access-Control-Allow-Headers":"Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers"
-                        }
-                })
+                // {
+                //     headers:{
+                //     "Access-Control-Allow-Origin": '*',
+                //     "Access-Control-Allow-Methods": 'GET',
+                //     "Access-Control-Allow-Headers":"Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers"
+                //         }
+                // })
                 .then(res=>dispatch(fetchNewsSuccess(res.data)))
                 // .then(res=>console.log(res))
                 .catch(err=>console.log('err',err))
