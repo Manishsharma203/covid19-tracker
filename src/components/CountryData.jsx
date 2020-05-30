@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Chart from "react-apexcharts";
 import { useSelector } from 'react-redux';
+import { useState } from 'react';
 
 export default function CountryData() {
 
@@ -10,6 +11,14 @@ export default function CountryData() {
     const recovered= statewise.slice(1).map(e=>e.recovered).slice(0,8)
     const deaths= statewise.slice(1).map(e=>e.deaths).slice(0,8)
 
+    let viewportWidth = window.innerWidth;
+    const [dataLabelsFlag, setdataLabelsFlag]= useState(false)
+    useEffect(() => {
+      console.log(viewportWidth)
+      if(viewportWidth>567){
+        setdataLabelsFlag(true)
+      }
+    }, [])
     var state;
     if(stateNames){
         state = {
@@ -34,6 +43,9 @@ export default function CountryData() {
                   horizontal: true,
                 },
               },
+              dataLabels: {
+                enabled: dataLabelsFlag
+              },
               stroke: {
                 width: 1,
                 colors: ['#fff']
@@ -54,16 +66,19 @@ export default function CountryData() {
                 opacity: 1
               },
               legend: {
-                position: 'top',
-                horizontalAlign: 'left',
+                position: 'bottom',
+                horizontalAlign: 'center',
                 offsetX: 40
               }
             },
+            dataLabels: {
+              enabled: true,
+            }
           };
     }
     return (
         <div>
-            {stateNames && <Chart className='col-12 my-5' options={state.options} series={state.series} type="bar" height={650} />}
+            {stateNames && <Chart className='my-5' options={state.options} series={state.series} type="bar" height={650} />}
         </div>
     )
 }
