@@ -31,9 +31,9 @@ export default function StateDetails(props) {
                 <div>
                     {districtdetails.districtData.map(e=>e.district==="Unknown"?
                     <div><i><small>* District-wise data is still under reconciliation</small></i></div>:
-                    <div></div>)}
+                    <div key={e.district}></div>)}
 
-                    <table className='table col-10 mx-auto'>
+                    <table className='table mx-auto' style={{width:'60%'}}>
                         <thead className='bg-secondary text-white'>
                             <tr>
                                 <th>District</th>
@@ -45,7 +45,7 @@ export default function StateDetails(props) {
                         </thead>
                         <tbody>
                             {districtdetails.districtData.map(e =>
-                                <tr>
+                                <tr key={e.district}>
                                     <td>{e.district}</td>
                                     <td>{e.active}</td>
                                     <td>{e.confirmed}</td>

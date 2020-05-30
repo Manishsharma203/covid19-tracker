@@ -63,7 +63,6 @@ export const fetchStatewiseData=()=>{
                 .catch(err=>console.log('err',err))
     } 
 }
-
 export const fetchNews=()=>{
     return dispatch=>{
         dispatch(fetchReq())
@@ -72,7 +71,7 @@ export const fetchNews=()=>{
                 // {
                 //     headers:{
                 //     "Access-Control-Allow-Origin": '*',
-                //     "Access-Control-Allow-Methods": 'GET',
+                //     "Access-Control-Allow-Methods": 'GET, HEAD, POST, OPTIONS',
                 //     "Access-Control-Allow-Headers":"Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers"
                 //         }
                 // })
