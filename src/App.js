@@ -29,7 +29,7 @@ function App(){
         <div className=' text-center' style={{fontFamily:'Bungee Inline',fontSize:'25px'}}>COVID-19 INDIA TRACKER</div>
         <div className="nav nav-tabs" id="nav-tab" role="tablist">
           <Link className="nav-item nav-link show active col-4 text-center" to='/' id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><div>Overview</div></Link>
-          <Link className="nav-item nav-link col-4 text-center" to='/statewise' id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><div>Statewise</div></Link>
+          <Link className="nav-item nav-link col-4 text-center" to='/statewise' id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><div>States/UTs</div></Link>
           <Link className="nav-item nav-link col-4 text-center" to='/news' id="nav-profile-tab2" data-toggle="tab" href="#nav-profile2" role="tab" aria-controls="nav-profile2" aria-selected="false"><div>Latest Health News</div></Link>
         </div>
       </nav>
