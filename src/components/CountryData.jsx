@@ -11,10 +11,12 @@ export default function CountryData() {
     const recovered= statewise.slice(1).map(e=>e.recovered).slice(0,8)
     const deaths= statewise.slice(1).map(e=>e.deaths).slice(0,8)
 
+    // const data= useSelector(state=>state.data)
+    // console.log(data)
+
     let viewportWidth = window.innerWidth;
     const [dataLabelsFlag, setdataLabelsFlag]= useState(false)
     useEffect(() => {
-      console.log(viewportWidth)
       if(viewportWidth>567){
         setdataLabelsFlag(true)
       }

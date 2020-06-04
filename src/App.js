@@ -17,12 +17,6 @@ function App(){
       dispatch(fetchStatewiseData())
   },[])
 
-  // const [popupFlag,popupStatus]= useState(true)
-  // useEffect(()=>{
-  //   popupStatus(false)
-  // },[])
-  // console.log()
-
   return (
     <div>
       <nav style={{background:'#FFBDAA'}}>
