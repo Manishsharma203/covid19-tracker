@@ -5,14 +5,14 @@ import { useState } from 'react';
 
 export default function CountryData() {
 
-    const statewise= useSelector(state=>state.statewise)
+    const statewise= useSelector(state=>state.statewise.sort((a,b)=>b.confirmed-a.confirmed))
     const stateNames = statewise.slice(1).map(e=>e.state).slice(0,8)
     const active= statewise.slice(1).map(e=>e.active).slice(0,8)
     const recovered= statewise.slice(1).map(e=>e.recovered).slice(0,8)
     const deaths= statewise.slice(1).map(e=>e.deaths).slice(0,8)
 
     // const data= useSelector(state=>state.data)
-    // console.log(data)
+    console.log('statewise',statewise)
 
     let viewportWidth = window.innerWidth;
     const [dataLabelsFlag, setdataLabelsFlag]= useState(false)
